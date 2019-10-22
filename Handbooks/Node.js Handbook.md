@@ -23,4 +23,4 @@
 ### An example Node.js Application
 
 * **::createServer()::  method of http creates a new http server and  returns it**
-* **Whenever a new request is received, the request event is called, providing two objects:   a request ::http.IncomingMessage:: object  and a response::http.ServerResponese:: object**
+* **Whenever a new request is received, the request event is called, providing two objects:   a request ::http.IncomingMessage:: object  and a response ::http.ServerResponese:: object**
