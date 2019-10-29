@@ -1,4 +1,4 @@
-# Infinite State Machine
+# Finite State Machine
 ## What it is ?
 * **A process where you define a series of potential states and every state has its own custom potential methods that can be called. If we try to call the method not no the list, it not gonna work**
 
