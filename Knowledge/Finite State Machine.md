@@ -224,3 +224,35 @@ Jeff.dispatch("eat");
 console.log(Jeff.state);
 
 ```
+**Illustration**
+
+```mermaid
+graph LR
+
+subgraph Machine
+
+subgraph State1
+    
+Available1-->Unavailable1
+    
+end
+
+subgraph State2
+    
+Available2-->Unavailable2
+    
+end
+    
+subgraph State3
+    
+Available3-->Unavailable3
+    
+end
+
+Available1-->Available2
+Available2-->Available3
+
+end
+
+Note right of Machine:Rational thoughts <br/>prevail...
+```
