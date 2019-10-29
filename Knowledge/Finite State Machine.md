@@ -254,5 +254,4 @@ Available2-->Available3
 
 end
 
-Note right of Machine:Rational thoughts <br/>prevail...
 ```
