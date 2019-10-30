@@ -14,7 +14,7 @@ Puppeteer is a Node library that we can use to control a  [headless Chrome](http
 * create automating testing
 * generate PDF from web pages
 
-It’s using the actual browser under the hood
+It’s using the actual browser under the hood.
 
 ## How to use it ?
 * we can use the `const browser = await puppeteer.launch()` method to **create a browser instance**
