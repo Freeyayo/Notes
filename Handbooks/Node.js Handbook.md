@@ -84,3 +84,91 @@ process.on('SIGTERM', () => {
 * **Add a dot and press tab,** the REPL will print all the properties and methods you can access on the class
 * Input  `> global.`  to explore global variables.
 * If after some code you type `_`, that is going to print the result of last operation
+
+### Pass arguments from the command line
+
+- Arguments can be *standalone* or have a *key and value*
+
+1 . 
+```bash
+node app.js kevin
+```
+```js
+const args = process.argv.slice(2)
+```
+2 . 
+```bash
+node app.js name=kevin
+```
+```js
+const args = process.argv.slice(2)
+args[0]  //name=kevin
+```
+Use minimist library:
+```js
+const args = require('minimist')process.argv.slice(2)
+arhs['name']  //kevin
+```
+
+## Output the Command Line
+
+- Basic output using the console module
+
+Almost same as `console` on the browser
+> `%o` is used to print an object representation
+
+- Clear the Console
+`console.clear()`
+- Counting Elements
+```js 
+const oranges = ['oranges','oranges'];
+
+console.count(oranges[0]); //orange: 1
+console.count(oranges[0]); //orange: 2
+console.count(oranges[1]); //orange: 3
+console.count(oranges[2]); //default: 1
+```
+
+- Print the Stack Trace
+It tells how to reach that part of code
+```js
+const function2 = () => console.trace();
+const function1 = () => function2();
+function1();
+//Trace
+//		at function2 (repl:1:33)
+//		at function1 (repl:1:25)
+//		at repl:1:1
+//		at Script.runInThisContext (vm.js:119:20)
+//		at REPLServer.defaultEval (repl.js:332:29)
+//		at bound (domain.js:395:14)
+//		at REPLServer.runBound [as eval] (domain.js:408:12)
+//		at REPLServer.onLine (repl.js:639:10)
+//		at REPLServer.emit (events.js:194:15)
+//		at REPLServer.EventEmitter.emit (domain.js:441:20)
+```
+- Calculate the Time Spent
+```js
+console.time(tag)
+...
+console.timeEnd(tag)
+```
+ - Stdout and Stderr
+ - Color the Output
+ ```js
+ const chalk = require('chalk');
+ console.log(chalk.yellow('it's yellow now'))
+ ```
+ - Create a Progress Bar
+ ```js
+ const ProgressBar = require('progress')
+ const bar = new ProgressBar(':bar', { tatol:10 })
+ const timer = setInterval(()=> {
+	bar.tick()
+	if(bar.complete){
+		 clearInterval(timer)
+	}
+},100)
+ ```
+
+## Accept Input from the Command Line
