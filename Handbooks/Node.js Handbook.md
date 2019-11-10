@@ -172,3 +172,33 @@ console.timeEnd(tag)
  ```
 
 ## Accept Input from the Command Line
+
+- Since node version 7 provides `readline` module: **get input from a readable stream** such as the `process.stdin` stream, which during the execution of a node program is a terminal input, **one line at a time**.
+
+```js
+const readline = require('readline').createInterface({
+	input: process.stdin,
+	output: process.stdout
+})
+
+readline.question(`What is your name?`, name => {
+	console.log(`Hi ${name}!`)
+	readline.close()
+})
+```
+The `question()` method shows the first parameter (a question) and waits for the user input. It calls the callback function once enter is pressed.
+
+- Inquirer.js
+```js
+const inquirer = require('inquirer')
+
+const question = [{
+	type: 'input',
+	name: 'name',
+	message: "what's your name?"
+}]
+
+inquirer.prompt(questions).then(answers => {
+	console.log(`Hi ${answers['name']}`)
+})
+```
