@@ -1,11 +1,11 @@
 ## Showcase
 Before:
 
-![enter image description here](https://wx3.sinaimg.cn/mw690/8272d230gy1gbrcq2yu5kj21400l1wia.jpg)
+![](https://wx3.sinaimg.cn/mw690/8272d230gy1gbrcq2yu5kj21400l1wia.jpg)
 
 After:
 
-![enter image description here](https://wx4.sinaimg.cn/mw690/8272d230gy1gbrcq2z5ikj21400l142u.jpg)
+![](https://wx4.sinaimg.cn/mw690/8272d230gy1gbrcq2z5ikj21400l142u.jpg)
 
 ## Description
 Default theme of our product just provides us a poor quality fixed navigation top bar, so I need to write a brand-new one to compatible with the current page.
