@@ -7,7 +7,7 @@
 
 - **Radix**
 `0 1 2 3 4 5 6 7 8 9 10`
-Decimal counting system has a  radix (or base) of ten.
+Decimal counting system has a radix (or base) of ten.
 Radix is the smallest number which can be represented by more than one symbol.**Different counting systems have different radixes, and so, the same digits can refer to different numbers in counting systems**.
 ```
 DECIMAL    BINARY    HEXADECIMAL
